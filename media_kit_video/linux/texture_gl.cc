@@ -100,8 +100,7 @@ static void texture_gl_dispose(GObject* object) {
         self->fbo = 0;
       }
       
-      // Restore previous context
-      eglMakeCurrent(current_display, current_draw, current_read, current_context);
+      video_output_restore_egl_context(video_output, current_display, current_draw, current_read, current_context);
     }
   }
   

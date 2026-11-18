@@ -98,6 +98,12 @@ EGLContext video_output_get_egl_context(VideoOutput* self);
 
 EGLSurface video_output_get_egl_surface(VideoOutput* self);
 
+void video_output_restore_egl_context(VideoOutput* self,
+                                      EGLDisplay display,
+                                      EGLSurface draw,
+                                      EGLSurface read,
+                                      EGLContext context);
+
 guint8* video_output_get_pixel_buffer(VideoOutput* self);
 
 gint64 video_output_get_width(VideoOutput* self);
